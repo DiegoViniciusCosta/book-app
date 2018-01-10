@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <a href="#">Login</a>
+        <img src="http://4.bp.blogspot.com/_2AlAWEUE14Q/TSnXg_R64SI/AAAAAAAAALo/8P95yLO51CI/s1600/PlayStation_logo.png" alt="">
+        <a class="bt-login" href="#">Login</a>
+    </header>
+
+    <div class="fitros-container">
         <p>Mostrar:</p>
-        <label for="">Leitores</label>
-        <input type="radio">
-        <label for="">Livros</label>
-        <input type="radio">
-        <select name="" id="">
+
+        <input class="input-filtro" name="tipo-filtro" type="radio" id="leitores">
+        <label for="leitores">Leitores</label>
+
+        <input class="input-filtro" name="tipo-filtro" type="radio" id="livros">
+        <label for="livros">Livros</label>
+
+        <select name="" id="" class="categorias">
             <option value="">Categorias</option>
             <option value="">Infantil</option>
             <option value="">Literatura Estrangeira</option>
@@ -25,10 +35,33 @@
             <option value="">Religião</option>
             <option value="">Teen</option>
         </select>
-    </header>
-    <div class="map-container">
     </div>
+
+    <div class="map-container" id="map">
+
+    </div>
+
     <a href="">Notificação</a>
+
+    <a href="">+</a>
+    <a href="">cadastrar novo livro</a>
+    <a href="">Ver meus livros</a>
+
+
 </body>
 
+  <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkD5K34ZM_EP-lG4-Bpq2mSqnElbCKz2U&callback=initMap"
+    async defer></script>
+
 </html>
+
+<!--AIzaSyCkD5K34ZM_EP-lG4-Bpq2mSqnElbCKz2U-->

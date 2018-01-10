@@ -51,3 +51,53 @@ table {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
+body{
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+header{
+	padding:10px;
+	border-bottom:1px solid #000;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	img{
+		height: 30px;
+	}
+	.bt-login{
+		text-decoration:none;
+		color:#000;
+		border:1px solid #000;
+		padding:5px 10px;
+		border-radius:5px;
+	}
+}
+
+.fitros-container{
+	padding:10px;
+	border-bottom:1px solid #000;
+	.input-filtro{
+		display: none;
+	}
+	.input-filtro:checked + label{
+		background: rgba(0,0,0,0.1);
+	}
+
+	label{
+		border:1px solid #000;
+		padding:5px;
+		display: inline-block;
+	}
+	.categorias{
+		display: none;
+	}
+	#livros:checked ~ select{
+		display: block;
+	}
+}
+
+.map-container{
+	height: 400px;
+	width:100%;
+}
