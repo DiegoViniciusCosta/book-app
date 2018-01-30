@@ -6,6 +6,22 @@ $cor-padrao: #4d007f;
    License: none (public domain)
 */
 
+
+::-webkit-scrollbar-track {
+  // background-color: #f4f4f4; 
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  // background: #00adef; 
+}
+
+::-webkit-scrollbar-thumb {
+  // background: #a0a0a0; 
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,10 +76,14 @@ body,html{
 	width: 100%;
 	font-family: 'Quicksand', sans-serif;
 }
+
 .input-filtro{
 	display: none;
 }
 
+strong{
+	font-weight:bolder;
+}
 
 
 header{
@@ -98,10 +118,10 @@ header{
 	align-items:flex-start;
 	width: auto;
 	height: auto;
-	top: 12%;
-	left: 0px;
+	bottom: 15px;
+	left: 50%;
+	transform:translateX(-50%);
 	z-index: 999;
-	padding-left:10px;
 	.filtroIcone{
 		position:relative;
 		z-index: 200;
@@ -112,20 +132,22 @@ header{
 		border-radius:50%;
 		padding:15px;
 		img{
-			height: 20px;
-			width: 20px;
+			height: 30px;
+			width: 30px;
 		}
 	}
 }
 
 .filter{
-	position: relative;
+	position: absolute;
 	width: 250px;
 	padding: 20px;
 	border-radius:5px;
 	background: $cor-padrao;
 	display:none;
-	margin-left:10px;
+	bottom: 70px;
+	left:50%;
+	transform:translateX(-50%);
 	p{
 		width: 100%;
 		margin-bottom:10px;
@@ -167,18 +189,6 @@ header{
 		margin: 0px;
 		padding: 10px;
 	}
-	.input-area button{
-		position:absolute;
-		right: 0px;
-		top:50%;
-		padding: 14px;
-		border:none;
-		background:$cor-padrao;
-		color:#fff;
-		border-radius: 5px;
-		border: 3px solid #fff;
-		transform: translateY(-50%);
-	}
 
 	#livros + label{
 		float: right;
@@ -213,8 +223,9 @@ header{
 		left:10px;
 		width: auto;
 		background:$cor-padrao;
-		padding:10px;
+		padding:15px;
 		color:#fff;
+		border:none;
 	}
 	nav{
 		position: absolute;
@@ -225,7 +236,7 @@ header{
 		padding:15px;
 		border-radius:50%;
 		img{
-			height: 25px; 
+			height: 30px; 
 		}
 		a{
 			color:#fff;
@@ -315,7 +326,7 @@ nav{
 	}
 }
 
-.area-login-cadastro{
+.area-roxa{
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -364,7 +375,7 @@ nav{
 		}
 	}
 }
-.se-login, .se-cadastrar, .se-esqueci, .se-cadastrar-livro{
+.se-login, .se-cadastrar, .se-esqueci, .se-cadastrar-livro, .se-notificacao, .mascara, .se-analisando-troca{
 	display:none;
 }
  .input-area textarea{
@@ -392,5 +403,111 @@ nav{
 	img{
 		height: 30px;
 		margin-left:10px;
+	}
+}
+
+.se-notificacao{
+	.notificacao-area{
+		display:flex;
+		align-items:center;
+		border-bottom:2px solid #310051;
+		padding:15px 0px;
+		img{
+			width: 15%;
+			margin-right:10px;
+			border-radius:5px;
+		}
+		p{
+			color:#fff;
+		}
+	}
+	.lido{
+		opacity: 0.5;
+	}
+}
+
+.mascara{
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index: 1222;
+	width: 100%;
+	height: 100%;
+	background: rgba(5,2,55,0.5);
+}
+
+.modal{
+	position: fixed;
+	z-index: 1233;
+	width:95%;
+	height: 95%;
+	min-height:0px;
+	border-radius:10px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	padding:20px;
+	overflow:hidden;
+	border:3px solid #310051;
+	h2{
+		margin: 0px;
+		height: 10%;
+	}
+	.content{
+		position: relative;
+		overflow: auto;
+		height: 90%;
+		display:flex;
+		flex-wrap:wrap;
+		align-items:flex-start;
+		align-content:flex-start;
+		.o-que-quer-area{
+			width:100%;
+			display:flex;
+			align-items:center;
+			padding-bottom:20px;
+			margin-bottom:20px;
+			border-bottom:2px solid #310051;
+			h3{
+				color:#fff;
+			}
+			img{
+				height: 90px;
+				border:3px solid #310051;
+				border-radius:5px;
+				margin-right:15px;
+			}
+		}
+		.o-que-tem-area{
+			width:100%;
+			h3{
+				color:#fff;
+				font-weight:bolder;
+				margin-bottom:20px;
+			}
+			.livro-area{
+				display:flex;
+				align-items:center;
+				align-content:flex-start;
+				margin-bottom:20px;
+				p{
+					color:#fff;
+					margin-bottom:10px;
+				}
+				img{
+					height: 90px;
+					width: 95px;
+					border:3px solid #310051;
+					border-radius:5px;
+					margin-right:15px;
+				}
+				.bt{
+					width:auto;
+					text-align:center;
+					padding:5px 10px;
+					font-size:100%;
+				}
+			}
+		}
 	}
 }

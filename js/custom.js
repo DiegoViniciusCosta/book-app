@@ -47,3 +47,25 @@ $('.cadastrar-novo-livro').on('click', function(){
 $('.close-cadastrar-livro').on('click', function(){
 	$('.se-cadastrar-livro').toggle();
 });
+
+
+
+$('.notification').on('click', function(){
+	$('.se-notificacao').toggle();
+});
+$('.close-notificacao').on('click', function(){
+	$('.se-notificacao').toggle();
+});
+
+
+
+$('.notificacao-area').on('click', function(){
+	$('.se-analisando-troca').toggle();
+	$('.mascara').toggle();
+});
+
+$('.close-analisando-troca').on('click', function(){
+	$('.se-analisando-troca').toggle();
+	$('.mascara').toggle();
+});
+

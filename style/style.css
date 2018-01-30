@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,6 +63,9 @@ body, html {
 .input-filtro {
   display: none; }
 
+strong {
+  font-weight: bolder; }
+
 header {
   position: absolute;
   z-index: 100;
@@ -87,10 +94,10 @@ header {
   align-items: flex-start;
   width: auto;
   height: auto;
-  top: 12%;
-  left: 0px;
-  z-index: 999;
-  padding-left: 10px; }
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; }
   .filtros-container .filtroIcone {
     position: relative;
     z-index: 200;
@@ -101,17 +108,19 @@ header {
     border-radius: 50%;
     padding: 15px; }
     .filtros-container .filtroIcone img {
-      height: 20px;
-      width: 20px; }
+      height: 30px;
+      width: 30px; }
 
 .filter {
-  position: relative;
+  position: absolute;
   width: 250px;
   padding: 20px;
   border-radius: 5px;
   background: #4d007f;
   display: none;
-  margin-left: 10px; }
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%); }
   .filter p {
     width: 100%;
     margin-bottom: 10px;
@@ -144,17 +153,6 @@ header {
     width: 100%;
     margin: 0px;
     padding: 10px; }
-  .filter .input-area button {
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    padding: 14px;
-    border: none;
-    background: #4d007f;
-    color: #fff;
-    border-radius: 5px;
-    border: 3px solid #fff;
-    transform: translateY(-50%); }
   .filter #livros + label {
     float: right; }
   .filter select, .filter input[type="text"] {
@@ -181,8 +179,9 @@ header {
     left: 10px;
     width: auto;
     background: #4d007f;
-    padding: 10px;
-    color: #fff; }
+    padding: 15px;
+    color: #fff;
+    border: none; }
   .container-filtro-map nav {
     position: absolute;
     bottom: 15px;
@@ -192,7 +191,7 @@ header {
     padding: 15px;
     border-radius: 50%; }
     .container-filtro-map nav img {
-      height: 25px; }
+      height: 30px; }
     .container-filtro-map nav a {
       color: #fff; }
     .container-filtro-map nav .flex-area {
@@ -265,7 +264,7 @@ nav img {
     color: #fff;
     font-size: 150%; }
 
-.area-login-cadastro {
+.area-roxa {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -275,24 +274,24 @@ nav img {
   min-height: 100%;
   z-index: 1000;
   padding: 20px 40px; }
-  .area-login-cadastro h2 {
+  .area-roxa h2 {
     color: #fff;
     font-size: 200%;
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px; }
-  .area-login-cadastro .input-area {
+  .area-roxa .input-area {
     margin-bottom: 10px; }
-    .area-login-cadastro .input-area a {
+    .area-roxa .input-area a {
       color: #fff;
       margin: 5px 0px; }
-  .area-login-cadastro .facebook-area span {
+  .area-roxa .facebook-area span {
     color: #fff;
     display: block;
     width: 100%;
     text-align: center;
     margin: 20px auto; }
-  .area-login-cadastro .facebook-area .bt-face {
+  .area-roxa .facebook-area .bt-face {
     border: none;
     padding: 10px 0px;
     width: 100%;
@@ -302,11 +301,11 @@ nav img {
     border-radius: 5px;
     margin: 0px auto;
     display: block; }
-    .area-login-cadastro .facebook-area .bt-face img {
+    .area-roxa .facebook-area .bt-face img {
       height: 20px;
       margin-right: 10px; }
 
-.se-login, .se-cadastrar, .se-esqueci, .se-cadastrar-livro {
+.se-login, .se-cadastrar, .se-esqueci, .se-cadastrar-livro, .se-notificacao, .mascara, .se-analisando-troca {
   display: none; }
 
 .input-area textarea {
@@ -333,5 +332,92 @@ nav img {
   .input-area input[type="file"] + label img {
     height: 30px;
     margin-left: 10px; }
+
+.se-notificacao .notificacao-area {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #310051;
+  padding: 15px 0px; }
+  .se-notificacao .notificacao-area img {
+    width: 15%;
+    margin-right: 10px;
+    border-radius: 5px; }
+  .se-notificacao .notificacao-area p {
+    color: #fff; }
+.se-notificacao .lido {
+  opacity: 0.5; }
+
+.mascara {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1222;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 2, 55, 0.5); }
+
+.modal {
+  position: fixed;
+  z-index: 1233;
+  width: 95%;
+  height: 95%;
+  min-height: 0px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  overflow: hidden;
+  border: 3px solid #310051; }
+  .modal h2 {
+    margin: 0px;
+    height: 10%; }
+  .modal .content {
+    position: relative;
+    overflow: auto;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start; }
+    .modal .content .o-que-quer-area {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #310051; }
+      .modal .content .o-que-quer-area h3 {
+        color: #fff; }
+      .modal .content .o-que-quer-area img {
+        height: 90px;
+        border: 3px solid #310051;
+        border-radius: 5px;
+        margin-right: 15px; }
+    .modal .content .o-que-tem-area {
+      width: 100%; }
+      .modal .content .o-que-tem-area h3 {
+        color: #fff;
+        font-weight: bolder;
+        margin-bottom: 20px; }
+      .modal .content .o-que-tem-area .livro-area {
+        display: flex;
+        align-items: center;
+        align-content: flex-start;
+        margin-bottom: 20px; }
+        .modal .content .o-que-tem-area .livro-area p {
+          color: #fff;
+          margin-bottom: 10px; }
+        .modal .content .o-que-tem-area .livro-area img {
+          height: 90px;
+          width: 95px;
+          border: 3px solid #310051;
+          border-radius: 5px;
+          margin-right: 15px; }
+        .modal .content .o-que-tem-area .livro-area .bt {
+          width: auto;
+          text-align: center;
+          padding: 5px 10px;
+          font-size: 100%; }
 
 /*# sourceMappingURL=style.css.map */
