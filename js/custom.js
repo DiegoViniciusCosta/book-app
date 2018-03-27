@@ -69,3 +69,25 @@ $('.close-analisando-troca').on('click', function(){
 	$('.mascara').toggle();
 });
 
+
+
+
+$('.ver-meus-livros').on('click', function(){
+	$('.se-vendo-meus-livros').toggle();
+});
+
+$('.close-vendo-meus-livros').on('click', function(){
+	$('.se-vendo-meus-livros').toggle();
+});
+
+
+$('.detalhes').on('click', function(){
+	$('.se-detalhes').toggle();
+	$('.mascara').toggle();
+});
+
+$('.close-detalhes').on('click', function(){
+	$('.se-detalhes').toggle();
+	$('.mascara').toggle();
+});
+

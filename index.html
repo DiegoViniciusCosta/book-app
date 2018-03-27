@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="style/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
@@ -15,26 +19,18 @@
     <div id="fb-root">
 
     </div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11';
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 
-<header>
-    <img src="logo.svg" alt="">
-    <a class="bt-login" href="#">Login</a>
-</header>
+    <header>
+        <img src="logo.svg" alt="">
+        <a class="bt-login" href="#">Login</a>
+    </header>
 
 
-<div class="container-filtro-map">
-   <div class="map" id="map">
-   </div>
+    <div class="container-filtro-map">
+     <div class="map" id="map">
+     </div>
 
-   <div class="filtros-container">
+     <div class="filtros-container">
         <input class="input-filtro filtra-icone" type="checkbox" id="filtraIcone">
         <label class="filtroIcone" for="filtraIcone">
             <img src="img/filter.svg" alt="">
@@ -76,218 +72,368 @@
         <a href="#"><img src="img/menu-icon.svg" alt="Book App"></a>
         <div class="flex-area">
             <a href="#" class="cadastrar-novo-livro">Cadastrar novo livro</a>
-            <a href="#">Ver meus livros</a>
+            <a href="#" class="ver-meus-livros">Ver meus livros</a>
         </div>
     </nav>
 </div>
 
-    <div class="area-roxa se-login">
-        <div class="bt-close close-login">
-            <p>X</p>
-        </div>
-        <h2>Login</h2>
+<div class="area-roxa se-login">
+    <div class="bt-close close-login">
+        <p>X</p>
+    </div>
+    <h2>Login</h2>
 
-        <div class="input-area">
-            <!-- <label for="email">Email</label> -->
-            <input type="text" id="email" placeholder="Email">
-        </div>
-        <div class="input-area">
-            <!-- <label for="password">password</label> -->
-            <input type="password" id="password" placeholder="Senha">
-        </div>
-
-        <div class="input-area">
-            <button class="bt" type="button">Entrar</button>
-        </div>
-
-        <div class="input-area">
-           <a href="#" class="esqueci-minha-senha">Esqueci minha senha</a>
-       </div>
-
-        <div class="facebook-area">
-            <span>ou</span>
-            <div class="input-area">
-                <button class="bt-face" type="button"><img src="img/facebook.svg" alt="">Entrar com facebook</button>
-            </div>
-            <div class="input-area">
-                <button class="bt cadastrar-com-email" type="button">Cadastrar com email</button>
-            </div>
-        </div>
-
+    <div class="input-area">
+        <!-- <label for="email">Email</label> -->
+        <input type="text" id="email" placeholder="Email">
+    </div>
+    <div class="input-area">
+        <!-- <label for="password">password</label> -->
+        <input type="password" id="password" placeholder="Senha">
     </div>
 
-    <div class="area-roxa se-cadastrar">
-        <div class="bt-close close-cadastrar">
-            <p>X</p>
-        </div>
-        
-        <h2>Cadastrar</h2>
-
-        <div class="input-area">
-            <input type="text" id="Nome" placeholder="Nome">
-        </div>
-        <div class="input-area">
-            <input type="text" id="email" placeholder="Email">
-        </div>
-        <div class="input-area">
-            <input type="password" id="password" placeholder="Senha">
-        </div>
-        <div class="input-area">
-            <input type="password" id="password" placeholder="Confirmar Senha">
-        </div>
-
-        <div class="input-area">
-            <button class="bt" type="button">Cadastrar</button>
-        </div>
+    <div class="input-area">
+        <button class="bt" type="button">Entrar</button>
     </div>
 
+    <div class="input-area">
+     <a href="#" class="esqueci-minha-senha">Esqueci minha senha</a>
+ </div>
 
+ <div class="facebook-area">
+    <span>ou</span>
+    <div class="input-area">
+        <button class="bt-face" type="button"><img src="img/facebook.svg" alt="">Entrar com facebook</button>
+    </div>
+    <div class="input-area">
+        <button class="bt cadastrar-com-email" type="button">Cadastrar com email</button>
+    </div>
+</div>
 
-    <div class="area-roxa se-esqueci">
-        <div class="bt-close close-esqueci">
-            <p>X</p>
-        </div>
-        
-        <h2>Recuperar senha</h2>
+</div>
 
-        <div class="input-area">
-            <input type="text" id="recupera" placeholder="Email de cadastro">
-        </div>
-
-        <div class="input-area">
-            <button class="bt" type="button" >Recuperar senha</button>
-        </div>
+<div class="area-roxa se-cadastrar">
+    <div class="bt-close close-cadastrar">
+        <p>X</p>
     </div>
 
+    <h2>Cadastrar</h2>
 
-
-
-    <div class="area-roxa se-cadastrar-livro">
-        <div class="bt-close close-cadastrar-livro">
-            <p>X</p>
-        </div>
-        
-        <h2>Cadastrar livro</h2>
-
-        <div class="input-area">
-            <input type="text" placeholder="Nome do livro">
-            <img src="img/search.svg" alt="">
-        </div>
-
-        <div class="input-area">
-            <input type="file" accept="image/*" multiple="multiple" capture="camera" id="foto-capa">
-            <label for="foto-capa">Foto da capa <img src="img/camera-icon.svg" alt=""></label>
-        </div>
-
-        <div class="input-area">
-            <input type="file" accept="image/*" multiple="multiple" capture="camera" id="foto-contra">
-            <label for="foto-contra">Foto da contra capa <img src="img/camera-icon.svg" alt=""></label>
-        </div>
-
-        <div class="input-area">
-            <textarea name="textarea" id="textarea" placeholder="Alguma observação?"></textarea>
-        </div>
-
-         <div class="input-area">
-            <button class="bt" type="button">Cadastrar</button>
-        </div>
+    <div class="input-area">
+        <input type="text" id="Nome" placeholder="Nome">
+    </div>
+    <div class="input-area">
+        <input type="text" id="email" placeholder="Email">
+    </div>
+    <div class="input-area">
+        <input type="password" id="password" placeholder="Senha">
+    </div>
+    <div class="input-area">
+        <input type="password" id="password" placeholder="Confirmar Senha">
     </div>
 
+    <div class="input-area">
+        <button class="bt" type="button">Cadastrar</button>
+    </div>
+</div>
 
 
-    <div class="area-roxa se-notificacao">
-        <div class="bt-close close-notificacao">
-            <p>X</p>
-        </div>
-        
-        <h2>Notificações</h2>
 
-        <div class="notificacao-area">
-            <img src="img/profile.png" alt="">
-            <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis - O Retorno do Rei</strong></p>
-        </div>
-        <div class="notificacao-area">
-            <img src="img/profile.png" alt="">
-            <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis - As duas torres</strong></p>
-        </div>
-        <div class="notificacao-area lido">
-            <img src="img/profile.png" alt="">
-            <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis</strong></p>
-        </div>
-        <div class="notificacao-area lido">
-            <img src="img/profile.png" alt="">
-            <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis</strong></p>
-        </div>
+<div class="area-roxa se-esqueci">
+    <div class="bt-close close-esqueci">
+        <p>X</p>
     </div>
 
+    <h2>Recuperar senha</h2>
 
-    <div class="mascara"></div>
+    <div class="input-area">
+        <input type="text" id="recupera" placeholder="Email de cadastro">
+    </div>
 
-    <div class="area-roxa modal se-analisando-troca">
-        <div class="bt-close close-analisando-troca">
-            <p>X</p>
+    <div class="input-area">
+        <button class="bt" type="button" >Recuperar senha</button>
+    </div>
+</div>
+
+
+
+
+<div class="area-roxa se-cadastrar-livro">
+    <div class="bt-close close-cadastrar-livro">
+        <p>X</p>
+    </div>
+
+    <h2>Cadastrar livro</h2>
+
+    <div class="input-area">
+        <input type="text" placeholder="Nome do livro">
+        <img src="img/search.svg" alt="">
+    </div>
+
+    <div class="input-area">
+        <input type="file" accept="image/*" multiple="multiple" capture="camera" id="foto-capa">
+        <label for="foto-capa">Foto da capa <img src="img/camera-icon.svg" alt=""></label>
+    </div>
+
+    <div class="input-area">
+        <input type="file" accept="image/*" multiple="multiple" capture="camera" id="foto-contra">
+        <label for="foto-contra">Foto da contra capa <img src="img/camera-icon.svg" alt=""></label>
+    </div>
+
+    <div class="input-area">
+        <textarea name="textarea" id="textarea" placeholder="Alguma observação?"></textarea>
+    </div>
+
+    <div class="input-area">
+        <button class="bt" type="button">Cadastrar</button>
+    </div>
+</div>
+
+
+
+<div class="area-roxa se-notificacao">
+    <div class="bt-close close-notificacao">
+        <p>X</p>
+    </div>
+
+    <h2>Notificações</h2>
+
+    <div class="notificacao-area">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis - O Retorno do Rei</strong></p>
+    </div>
+    <div class="notificacao-area">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis - As duas torres</strong></p>
+    </div>
+    <div class="notificacao-area lido">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis</strong></p>
+    </div>
+    <div class="notificacao-area lido">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis</strong></p>
+    </div>
+</div>
+
+
+<div class="mascara"></div>
+
+<div class="area-roxa modal se-analisando-troca">
+    <div class="bt-close close-analisando-troca">
+        <p>X</p>
+    </div>
+
+    <h2>Analisando</h2>
+
+    <div class="content">
+        <div class="o-que-quer-area">
+            <img src="https://images-submarino.b2w.io/produtos/01/00/item/244/3/244384_1GG.jpg" alt="">
+            <h3>O(A) Juliano deseja o seu livro: <strong>O senhor dos Aneis o retorno do rei</strong></h3>
         </div>
-        
-        <h2>Analisando</h2>
-
-        <div class="content">
-            <div class="o-que-quer-area">
-                <img src="https://images-submarino.b2w.io/produtos/01/00/item/244/3/244384_1GG.jpg" alt="">
-                <h3>O(A) Juliano deseja o seu livro: <strong>O senhor dos Aneis o retorno do rei</strong></h3>
-            </div>
-            <div class="o-que-tem-area">
-                <h3>Veja os livros da estante do(a) Juliano:</h3>
-                <div class="content">
-                    <div class="livro-area">  
-                        <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
-                        <div class="flex-area">
-                            <p>Harry Potter e a Pedra Filosofal</p>
-                            <button class="bt">Trocar</button>
-                            <button class="bt">Saiba mais</button>
-                        </div>
+        <div class="o-que-tem-area">
+            <h3>Veja os livros da estante do(a) Juliano:</h3>
+            <div class="content">
+                <div class="livro-area">  
+                    <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                    <div class="flex-area">
+                        <p>Harry Potter e a Pedra Filosofal</p>
+                        <button class="bt">Trocar</button>
+                        <button class="bt detalhes">Detalhes</button>
                     </div>
-                    <div class="livro-area">  
-                        <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
-                        <div class="flex-area">
-                            <p>Harry Potter e a Pedra Filosofal</p>
-                            <button class="bt">Trocar</button>
-                            <button class="bt">Saiba mais</button>
-                        </div>
+                </div>
+                <div class="livro-area">  
+                    <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                    <div class="flex-area">
+                        <p>Harry Potter e a Pedra Filosofal</p>
+                        <button class="bt">Trocar</button>
+                        <button class="bt detalhes">Detalhes</button>
                     </div>
-                    <div class="livro-area">  
-                        <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
-                        <div class="flex-area">
-                            <p>Harry Potter e a Pedra Filosofal</p>
-                            <button class="bt">Trocar</button>
-                            <button class="bt">Saiba mais</button>
-                        </div>
+                </div>
+                <div class="livro-area">  
+                    <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                    <div class="flex-area">
+                        <p>Harry Potter e a Pedra Filosofal</p>
+                        <button class="bt">Trocar</button>
+                        <button class="bt detalhes">Detalhes</button>
                     </div>
-                     <div class="livro-area">  
-                        <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
-                        <div class="flex-area">
-                            <p>Harry Potter e a Pedra Filosofal</p>
-                            <button class="bt">Trocar</button>
-                            <button class="bt">Saiba mais</button>
-                        </div>
+                </div>
+                <div class="livro-area">  
+                    <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                    <div class="flex-area">
+                        <p>Harry Potter e a Pedra Filosofal</p>
+                        <button class="bt">Trocar</button>
+                        <button class="bt detalhes">Detalhes</button>
                     </div>
-                     <div class="livro-area">  
-                        <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
-                        <div class="flex-area">
-                            <p>Harry Potter e a Pedra Filosofal</p>
-                            <button class="bt">Trocar</button>
-                            <button class="bt">Saiba mais</button>
-                        </div>
+                </div>
+                <div class="livro-area">  
+                    <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                    <div class="flex-area">
+                        <p>Harry Potter e a Pedra Filosofal</p>
+                        <button class="bt">Trocar</button>
+                        <button class="bt detalhes">Detalhes</button>
                     </div>
                 </div>
             </div>
-
         </div>
+
+    </div>
+</div>
+
+
+<div class="area-roxa se-notificacao">
+    <div class="bt-close close-notificacao">
+        <p>X</p>
     </div>
 
+    <h2>Notificações</h2>
+
+    <div class="notificacao-area">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis - O Retorno do Rei</strong></p>
+    </div>
+    <div class="notificacao-area">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis - As duas torres</strong></p>
+    </div>
+    <div class="notificacao-area lido">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis</strong></p>
+    </div>
+    <div class="notificacao-area lido">
+        <img src="img/profile.png" alt="">
+        <p>Juliano Goes está interessado no seu livro: <strong>O Senhor dos Anéis</strong></p>
+    </div>
+</div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<div class="area-roxa se-vendo-meus-livros">
+    <div class="bt-close close-vendo-meus-livros">
+        <p>X</p>
+    </div>
+
+    <h2>Meus livros</h2>
+
+    <div class="content">
+        <div class="o-que-tem-area">
+            <div class="livro-area">  
+                <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                <div class="flex-area">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <button class="bt">Editar</button>
+                    <button class="bt">Excluir</button>
+                </div>
+            </div>
+
+            <div class="livro-area">  
+                <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                <div class="flex-area">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <button class="bt">Editar</button>
+                    <button class="bt">Excluir</button>
+                </div>
+            </div>
+
+            <div class="livro-area">  
+                <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                <div class="flex-area">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <button class="bt">Editar</button>
+                    <button class="bt">Excluir</button>
+                </div>
+            </div>
+
+            <div class="livro-area">  
+                <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                <div class="flex-area">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <button class="bt">Editar</button>
+                    <button class="bt">Excluir</button>
+                </div>
+            </div>
+
+            <div class="livro-area">  
+                <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                <div class="flex-area">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <button class="bt">Editar</button>
+                    <button class="bt">Excluir</button>
+                </div>
+            </div>
+
+            <div class="livro-area">  
+                <img src="https://images-soubarato.b2w.io/produtos/01/00/item/128892/0/128892010_2GG.jpg" alt="Livro">
+                <div class="flex-area">
+                    <h3>Harry Potter e a Pedra Filosofal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <button class="bt">Editar</button>
+                    <button class="bt">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="area-roxa modal se-detalhes sombra">
+    <div class="bt-close close-detalhes">
+        <p>X</p>
+    </div>
+
+    <h2>Detalhes</h2>
+
+    <div class="content">
+        <div class="o-que-tem-area">
+            <h3>Detalhes do livro XXXX:</h3>
+            <div class="content">
+                <!-- <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="http://ilustradorveiga.com.br/wp-content/uploads/2017/01/criacao-de-capa-de-livro.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="http://ilustradorveiga.com.br/wp-content/uploads/2017/01/criacao-de-capa-de-livro.jpg" alt="">
+                    </div>
+                </div> -->
+
+                <img src="http://ilustradorveiga.com.br/wp-content/uploads/2017/01/criacao-de-capa-de-livro.jpg" alt="">
+
+                <div class="observacoes-area">
+                    <h3>Comentários do dono:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam facilis numquam aperiam vel consequuntur. Ea esse alias voluptates illum, dignissimos libero tempora enim autem dolorem, iste distinctio excepturi, iure expedita.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            center: true,
+            items:1,
+            loop:false,
+            margin:10,
+            responsive:{
+                600:{
+                    items:1
+                }
+            }
+        });
+    });
 </script>
+
 <script src="js/custom.js">
 </script>
 
