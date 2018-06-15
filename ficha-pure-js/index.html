@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Porto Seguro Carro Fácil</title>
 </head>
+
 <body>
     <div class="global">
         <form onsubmit="criaCadastro(event)" style="display:flex; flex-direction:column; width:300px;">
@@ -21,7 +23,7 @@
                 <span>Masculino</span>
                 <input type="radio" id="sexoMasc" value="masculino" name="sexo">
             </label>
-            
+
             <!--/INPUT RADIO-->
 
             <input type="text" id="cpf" placeholder="CPF">
@@ -29,15 +31,20 @@
             <input type="text" id="cnh" placeholder="CNH">
             <input type="text" id="estadoCivil" placeholder="Estado Civil">
 
-            <input type="text" id="ocupacao" placeholder="Ocupacao">
+            <select name="ocupacoes" id="ocupacoes">
+                <option value="ocupacao">ocupacao</option>
+            </select>
+
             <input type="text" id="profissao" placeholder="Profissão">
             <input type="text" id="renda" placeholder="Renda">
             <input type="text" id="nomeEmpresa" placeholder="Nome da Empresa">
 
             <!--INPUT TELEFONE -->
-            <input type="text" id="telefone" placeholder="telefone">
+            <input type="text" id="telefone" placeholder="Telefone Principal">
+            <input type="text" id="telefone2" placeholder="Telefone secudario">
+            <input type="text" id="telefone3" placeholder="Telefone terciario">
             <!--/INPUT TELEFONE-->
-            
+
             <input type="email" id="email" placeholder="Email">
 
             <!--ENDEREÇO-->
@@ -63,14 +70,40 @@
             <select name="cores" id="cores">
                 <option value="vermelho">Vermelho</option>
             </select>
-            <select name="marcas" id="marcas">
-                <option value="marca">Marca</option>
+            <select name="placas" id="placas">
+                <option value="placa">Placa</option>
             </select>
-            
+
             <!--PERÍODO DE CONTRATO-->
-            <input type="text" id="periodoContrato" placeholder="Período de Contrato">
-            <input type="text" id="pacotekm" placeholder="Pacote de KM">
+            <label>
+                <span>12 meses</span>
+                <input type="radio" id="periodoContrato12" value="12 meses" name="periodoContrato">
+            </label>
+
+            <label>
+                <span>24 meses</span>
+                <input type="radio" id="periodoContrato24" value="24 meses" name="periodoContrato">
+            </label>
             <!--/PERÍODO DE CONTRATO-->
+
+            <!--PACOTE KM-->
+            <label>
+                <span>24 000</span>
+                <input type="radio" id="pacotekm24" value="Pacote 24000 km" name="pacotekm">
+            </label>
+            <label>
+                <span>36 000</span>
+                <input type="radio" id="pacotekm36" value="Pacote 36000 km" name="pacotekm">
+            </label>
+            <label>
+                <span>48 000</span>
+                <input type="radio" id="pacotekm48" value="Pacote 48000 km" name="pacotekm">
+            </label>
+            <label>
+                <span>60 000</span>
+                <input type="radio" id="pacotekm60" value="Pacote 60000 km" name="pacotekm">
+            </label>
+            <!--/PACOTE KM-->
 
             <!--VALOR DA PARCELA-->
             <h2>Valor da parcela</h2>
@@ -83,4 +116,5 @@
     <script src="js/custom.js"></script>
 
 </body>
+
 </html>
